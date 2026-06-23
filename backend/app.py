@@ -26,7 +26,11 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "dev-secret-key-change-in-production")
 
 # Explicit CORS for local development
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(
+    app,
+    resources={r"/*": {"origins": "*"}},
+    supports_credentials=True
+)
 
 # Register Blueprints
 app.register_blueprint(ats_bp, url_prefix='/api')
@@ -38,12 +42,16 @@ app.register_blueprint(github_bp, url_prefix='/api')
 app.register_blueprint(leetcode_bp, url_prefix='/api')
 app.register_blueprint(confidence_bp, url_prefix='/api')
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Backend Running"})
+
 @app.route('/health')
 def health():
     return jsonify({"status": "up", "api_key_status": "present" if os.getenv("GROQ_API_KEY") else "missing"})
 
 if __name__ == "__main__":
-    print("\n--- [START] KRIYETA BACKEND STARTING ---")
+    print("\n--- [START] BACKEND STARTING ---")
     if not os.getenv("GROQ_API_KEY"):
         print("[ERROR] GROQ_API_KEY is missing!")
     else:
