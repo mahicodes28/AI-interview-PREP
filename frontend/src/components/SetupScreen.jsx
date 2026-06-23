@@ -171,10 +171,10 @@ const SetupScreen = () => {
     }
   }, [location, navigate]);
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('user');
-    navigate('/login');
-  };
+  // const handleLogout = () => {
+  //   sessionStorage.removeItem('user');
+  //   navigate('/login');
+  // };
 
   const startAnalysis = async (e) => {
     e.preventDefault();
@@ -566,7 +566,7 @@ const SetupScreen = () => {
                       transition: "background 0.15s ease, color 0.15s ease",
                       flexShrink: 0, outline: "none",
                     }}
-                    onMouseEnter={e => { if (qCount > 1) { e.currentTarget.style.background = "rgba(56,189,248,0.1)"; e.currentTarget.style.color = "#38bdf8"; }}}
+                    onMouseEnter={e => { if (qCount > 1) { e.currentTarget.style.background = "rgba(56,189,248,0.1)"; e.currentTarget.style.color = "#38bdf8"; } }}
                     onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = qCount <= 1 ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.7)"; }}
                   >−</button>
 
@@ -593,7 +593,7 @@ const SetupScreen = () => {
                       transition: "background 0.15s ease, color 0.15s ease",
                       flexShrink: 0, outline: "none",
                     }}
-                    onMouseEnter={e => { if (qCount < 10) { e.currentTarget.style.background = "rgba(56,189,248,0.1)"; e.currentTarget.style.color = "#38bdf8"; }}}
+                    onMouseEnter={e => { if (qCount < 10) { e.currentTarget.style.background = "rgba(56,189,248,0.1)"; e.currentTarget.style.color = "#38bdf8"; } }}
                     onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = qCount >= 10 ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.7)"; }}
                   >+</button>
                 </div>

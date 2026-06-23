@@ -11,8 +11,8 @@ import Chatbot from './components/Chatbot';
 import ProfilePage from './components/ProfilePage';
 import ProfileAnalyzer from './components/ProfileAnalyzer';
 import UserHistory from './components/UserHistory';
-import InterviewResult from './components/InterviewResult';
 import ReviewDashboard from './components/ReviewDashboard';
+
 
 const AppLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

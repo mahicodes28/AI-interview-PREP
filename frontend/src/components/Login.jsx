@@ -41,6 +41,7 @@ const Login = () => {
   };
 
   // ── Load & render Google SDK button ─────────────────────────────
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const initGoogle = () => {
       if (window.google && googleBtnRef.current) {

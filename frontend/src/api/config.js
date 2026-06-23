@@ -2,6 +2,6 @@
 // During local development (npm start), this will point to 127.0.0.1:5000.
 // In production, this can be set via an environment variable or default to the current host.
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5000";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://ai-interview-prep-lsw9.onrender.com";
 
 export default API_BASE_URL;
