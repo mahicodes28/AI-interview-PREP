@@ -38,11 +38,11 @@ def health():
     return jsonify({"status": "up", "api_key_status": "present" if os.getenv("GROQ_API_KEY") else "missing"})
 
 if __name__ == "__main__":
-    print("\n--- 🚀 KRIYETA BACKEND STARTING ---")
+    print("\n--- [START] KRIYETA BACKEND STARTING ---")
     if not os.getenv("GROQ_API_KEY"):
-        print("❌ ERROR: GROQ_API_KEY is missing!")
+        print("[ERROR] GROQ_API_KEY is missing!")
     else:
-        print("✅ API Key Detected.")
+        print("[OK] API Key Detected.")
     
     print("\n--- REGISTERED ROUTES ---")
     for rule in app.url_map.iter_rules():

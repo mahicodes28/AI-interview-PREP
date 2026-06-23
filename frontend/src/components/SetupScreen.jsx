@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import axios from 'axios';
+import { useNavigate, useLocation } from 'react-router-dom';
+import InteractiveBackground from "./InteractiveBackground";
+import API_BASE_URL from '../api/config';
 
 // ─── Role Data ────────────────────────────────────────────────────────────────
 const ROLE_GROUPS = [
@@ -141,10 +145,6 @@ const RoleDropdown = ({ value, onChange }) => {
     </div>
   );
 };
-import axios from 'axios';
-import { useNavigate, useLocation } from 'react-router-dom';
-import InteractiveBackground from "./InteractiveBackground";
-import API_BASE_URL from '../api/config';
 
 const SetupScreen = () => {
   const [file, setFile] = useState(null);

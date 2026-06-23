@@ -203,7 +203,7 @@ const ProfilePage = () => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '4px' }}>OS Impact</div>
-                    <div style={{ fontSize: '1.8rem', fontWeight: '800', color: 'var(--accent-cyan)' }}>{user.github_score || 'N/A'}</div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: '800', color: 'var(--accent-cyan)' }}>{user.github_score != null ? user.github_score : 'N/A'}</div>
                 </div>
             </div>
             <div style={{ marginTop: 'auto', paddingTop: '15px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
@@ -220,7 +220,7 @@ const ProfilePage = () => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '4px' }}>DSA Score</div>
-                    <div style={{ fontSize: '1.8rem', fontWeight: '800', color: '#FFAA00' }}>{user.leetcode_score || 'N/A'}</div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: '800', color: '#FFAA00' }}>{user.leetcode_score != null ? user.leetcode_score : 'N/A'}</div>
                 </div>
             </div>
             <div style={{ marginTop: 'auto', paddingTop: '15px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>

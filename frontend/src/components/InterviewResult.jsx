@@ -114,14 +114,14 @@ const InterviewResult = () => {
         <div className="glass-panel" style={{ padding: '30px' }}>
           <h3 style={{ color: '#00ff88', margin: '0 0 20px 0' }}>✅ Strengths</h3>
           <ul style={{ paddingLeft: '20px', color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-            {data.strengths.map((str, idx) => <li key={idx}>{str}</li>)}
+            {(data.strengths || []).map((str, idx) => <li key={idx}>{str}</li>)}
           </ul>
         </div>
 
         <div className="glass-panel" style={{ padding: '30px' }}>
           <h3 style={{ color: 'var(--accent-red)', margin: '0 0 20px 0' }}>🎯 Areas for Improvement</h3>
           <ul style={{ paddingLeft: '20px', color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-            {data.weaknesses.map((wk, idx) => <li key={idx}>{wk}</li>)}
+            {(data.weaknesses || []).map((wk, idx) => <li key={idx}>{wk}</li>)}
           </ul>
         </div>
       </div>
@@ -156,7 +156,7 @@ const InterviewResult = () => {
       <div className="glass-panel" style={{ width: '100%', maxWidth: '900px', padding: '30px' }}>
         <h3 style={{ color: 'var(--accent-cyan)', margin: '0 0 20px 0' }}>Session Transcript</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {data.qna_list.map((qna, idx) => (
+          {(data.qna_list || []).map((qna, idx) => (
             <div key={idx} style={{ background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
               <div style={{ color: 'white', fontWeight: '500', marginBottom: '10px' }}>Q{idx + 1}: {qna.question}</div>
               <div style={{ color: 'var(--text-secondary)', fontStyle: 'italic', lineHeight: '1.6' }}>"{qna.answer}"</div>

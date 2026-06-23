@@ -33,7 +33,7 @@ const Sidebar = ({ isSidebarOpen }) => {
   return (
     <aside className={`sidebar glass-panel ${isSidebarOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-header">
-        <h2 className="glow-text text-center">Kriyeta 5.0</h2>
+        <h2 className="glow-text text-center">SMART.AI</h2>
         <p className="sidebar-subtitle">AI Interview Coach</p>
       </div>
 

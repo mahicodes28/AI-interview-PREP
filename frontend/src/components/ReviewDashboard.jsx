@@ -190,13 +190,13 @@ const ReviewDashboard = () => {
               <div className="stat-card" style={{ borderColor: 'rgba(0, 255, 136, 0.2)' }}>
                 <h3 style={{ color: '#00ff88', margin: '0 0 15px 0', fontSize: '1.1rem' }}>✅ Key Strengths</h3>
                 <ul style={{ paddingLeft: '20px', color: 'rgba(255,255,255,0.6)', lineHeight: '1.8', margin: 0 }}>
-                  {data.strengths.map((s, i) => <li key={i}>{s}</li>)}
+                  {(data.strengths || []).map((s, i) => <li key={i}>{s}</li>)}
                 </ul>
               </div>
               <div className="stat-card" style={{ borderColor: 'rgba(255, 75, 43, 0.2)' }}>
                 <h3 style={{ color: '#ff4b2b', margin: '0 0 15px 0', fontSize: '1.1rem' }}>🎯 Improvement Areas</h3>
                 <ul style={{ paddingLeft: '20px', color: 'rgba(255,255,255,0.6)', lineHeight: '1.8', margin: 0 }}>
-                  {data.weaknesses.map((w, i) => <li key={i}>{w}</li>)}
+                  {(data.weaknesses || []).map((w, i) => <li key={i}>{w}</li>)}
                 </ul>
               </div>
             </div>
@@ -205,7 +205,7 @@ const ReviewDashboard = () => {
 
         {activeTab === 'qna' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {data.qna_list.map((qna, idx) => (
+            {(data.qna_list || []).map((qna, idx) => (
               <div key={idx} className="qna-card">
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
                   <span style={{ color: 'var(--accent-cyan)', fontWeight: '700', fontSize: '0.9rem' }}>QUESTION {idx + 1}</span>

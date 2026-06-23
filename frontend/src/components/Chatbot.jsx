@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 const WEBSITE_INFO = {
-  greeting: "Welcome to Kriyeta 5.0 — your AI-powered interview preparation platform. I can help you navigate the app and answer your questions.",
+  greeting: "Welcome to AI.SMART — your AI-powered interview preparation platform. I can help you navigate the app and answer your questions.",
   quickReplies: [
     "How do I start an interview?",
     "What is ATS analysis?",
@@ -88,10 +88,10 @@ const Chatbot = ({ isOpen, onClose }) => {
           <div className="web-assistant-header-info">
             <div className="web-assistant-avatar">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                <line x1="9" y1="9" x2="9.01" y2="9"/>
-                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
               </svg>
             </div>
             <div>
@@ -101,8 +101,8 @@ const Chatbot = ({ isOpen, onClose }) => {
           </div>
           <button className="web-assistant-close" onClick={onClose} title="Close assistant">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
         </div>
@@ -148,8 +148,8 @@ const Chatbot = ({ isOpen, onClose }) => {
           />
           <button className="btn-primary web-assistant-send-btn" onClick={() => handleSend()}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"/>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
             </svg>
           </button>
         </div>
