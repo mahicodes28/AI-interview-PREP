@@ -7,6 +7,7 @@ __pycache__/
 *$py.class
 *.so
 .env
+.env.*
 **/.env
 # Models
 # **/onnx_model/
